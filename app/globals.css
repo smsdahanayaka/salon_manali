@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+/*
+  Palette from planning/design-direction.md — light-only by design (see
+  that file's "Why light-only, no dark mode" section). Do not add a
+  prefers-color-scheme dark block; that was a deliberate scope decision.
+*/
+:root {
+  --color-cream: #fbf6ef;
+  --color-charcoal: #2b2420;
+  --color-gold: #a8672e;
+  --color-gold-dark: #8a5424;
+  --color-maroon: #6b1e2b;
+  --color-blush: #f0dcc9;
+  --color-whatsapp: #25d366;
+  --color-whatsapp-dark: #1ebe5b;
+}
+
+@theme inline {
+  --font-serif: var(--font-playfair);
+  --font-sans: var(--font-inter);
+
+  --color-cream: var(--color-cream);
+  --color-charcoal: var(--color-charcoal);
+  --color-gold: var(--color-gold);
+  --color-gold-dark: var(--color-gold-dark);
+  --color-maroon: var(--color-maroon);
+  --color-blush: var(--color-blush);
+  --color-whatsapp: var(--color-whatsapp);
+  --color-whatsapp-dark: var(--color-whatsapp-dark);
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-charcoal);
+}
+
+/* Minimum comfortable tap target on touch devices, per ui-ux-flow.md */
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
